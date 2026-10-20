@@ -1,0 +1,30 @@
+<Page x:Class="OrcamentoObra.Pages.NovoClientePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Novo cliente">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="30" MaxWidth="600">
+            <TextBlock Text="Adicionar novo cliente" FontSize="22" FontWeight="Bold" Margin="0,0,0,15"/>
+
+            <TextBlock Text="Nome *"/>
+            <TextBox x:Name="TxtNome" Margin="0,0,0,8"/>
+            <TextBlock Text="NIF * (9 dígitos)"/>
+            <TextBox x:Name="TxtNif" Margin="0,0,0,8"/>
+            <TextBlock Text="Morada *"/>
+            <TextBox x:Name="TxtMorada" Margin="0,0,0,8"/>
+            <TextBlock Text="Telemóvel *"/>
+            <TextBox x:Name="TxtTelemovel" Margin="0,0,0,8"/>
+            <TextBlock Text="Email *"/>
+            <TextBox x:Name="TxtEmail" Margin="0,0,0,8"/>
+            <TextBlock Text="Dados bancários (IBAN) *"/>
+            <TextBox x:Name="TxtBancario" Margin="0,0,0,8"/>
+            <TextBlock Text="Dinheiro gasto com obras (€) *"/>
+            <TextBox x:Name="TxtGasto" Text="0" Margin="0,0,0,15"/>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Guardar" Width="160" Style="{StaticResource Botao}" Click="Guardar_Click"/>
+                <Button Content="Voltar" Width="160" Style="{StaticResource Botao}" Click="Voltar_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

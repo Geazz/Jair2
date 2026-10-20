@@ -1,0 +1,37 @@
+<Page x:Class="OrcamentoObra.Pages.ProcurarOrcamentoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Procurar orçamento">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Procurar orçamento" FontSize="22" FontWeight="Bold" Margin="0,0,0,15"/>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,10">
+            <TextBlock Text="Pesquisar por número ou nome do cliente"/>
+            <TextBox x:Name="TxtPesquisa" TextChanged="Pesquisa_TextChanged"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="2" x:Name="GridOrcamentos" AutoGenerateColumns="False"
+                  IsReadOnly="True" CanUserAddRows="False" SelectionMode="Single"
+                  MouseDoubleClick="GridOrcamentos_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nº orçamento" Binding="{Binding Numero}" Width="150"/>
+                <DataGridTextColumn Header="Data" Binding="{Binding Data}" Width="100"/>
+                <DataGridTextColumn Header="Cliente" Binding="{Binding Cliente}" Width="*"/>
+                <DataGridTextColumn Header="Validade" Binding="{Binding Validade}" Width="100"/>
+                <DataGridTextColumn Header="Total" Binding="{Binding Total}" Width="130"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,15,0,0">
+            <Button Content="Abrir selecionado" Width="180" Style="{StaticResource Botao}" Click="Abrir_Click"/>
+            <Button Content="Voltar" Width="180" Style="{StaticResource Botao}" Click="Voltar_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

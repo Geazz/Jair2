@@ -1,0 +1,13 @@
+<Window x:Class="OrcamentoObra.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Orçamentos de Obra" Width="1000" Height="720"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Background="#1F3A5F">
+            <Image Source="pack://application:,,,/Assets/banner.png"
+                   Height="120" Stretch="Uniform" HorizontalAlignment="Center"/>
+        </Border>
+        <Frame x:Name="Principal" NavigationUIVisibility="Hidden"/>
+    </DockPanel>
+</Window>

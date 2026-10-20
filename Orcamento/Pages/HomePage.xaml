@@ -1,0 +1,13 @@
+<Page x:Class="OrcamentoObra.Pages.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Início">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="380">
+        <TextBlock Text="Menu Principal" FontSize="26" FontWeight="Bold"
+                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
+        <Button Content="Fazer orçamento" Style="{StaticResource Botao}" Click="NovoOrcamento_Click"/>
+        <Button Content="Procurar orçamento" Style="{StaticResource Botao}" Click="ProcurarOrcamento_Click"/>
+        <Button Content="Procurar cliente" Style="{StaticResource Botao}" Click="ProcurarCliente_Click"/>
+        <Button Content="Adicionar novo cliente" Style="{StaticResource Botao}" Click="NovoCliente_Click"/>
+    </StackPanel>
+</Page>
